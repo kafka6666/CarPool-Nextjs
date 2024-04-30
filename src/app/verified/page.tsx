@@ -1,3 +1,11 @@
-export const VerifiedPage = () => {
-  return <div>Your Account is verified</div>;
+import { Verified } from "@/features/Auth/Verified.tsx";
+
+const VerifiedPage = () => {
+  return (
+    <>
+      <Verified />
+    </>
+  );
 };
+
+export const VerifiedPage;

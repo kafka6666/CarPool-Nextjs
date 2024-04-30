@@ -1,4 +1,4 @@
-import { Signup } from "@/features/Auth/Signup";
+import Signup from "@/features/Auth/Signup.tsx";
 
 const SignupPage = () => {
   return (
