@@ -28,25 +28,6 @@ const Signup = () => {
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   const signupForm = useSignupForm();
-  //   initialValues: {
-  //     email: "",
-  //     password: "",
-  //     confirmPassword: "",
-  //     terms: true,
-  //   },
-  //   validate: {
-  //     email: (value: string) =>
-  //       /^\S+@\S+$/.test(value) ? null : "Invalid email",
-  //     password: (value: string) =>
-  //       value.length > 6
-  //         ? null
-  //         : "Password should contain at least 6 characters",
-  //     confirmPassword: (value: string, { password }) =>
-  //       value === password ? null : "Passwords do not match", // Check with source code
-  //     terms: (terms: boolean) =>
-  //       !terms ? "You should accept terms and conditions" : null,
-  //   },
-  // });
 
   const handleSignup = async () => {
     const { email, password } = signupForm.values;
@@ -58,7 +39,7 @@ const Signup = () => {
       console.log(error);
       setIsSubmitting(true);
     } else {
-      setIsSubmitting(true);
+      setIsSubmitting(false);
       setIsSubmitted(true);
       console.log("Signup successful!");
     }
