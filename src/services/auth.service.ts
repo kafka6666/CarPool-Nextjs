@@ -1,10 +1,10 @@
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-import { AuthTokenResponse } from "@supabase/supabase-js";
+import { AuthResponse } from "@supabase/supabase-js";
 
 export const signupWithEmailPassword = async (
   email: string,
   password: string
-): Promise<AuthTokenResponse> => {
+): Promise<AuthResponse> => {
   const supabase = createClientComponentClient();
   const res = await supabase.auth.signUp({ email, password }); // used signUp i/o signInWithEmailPassword
 
