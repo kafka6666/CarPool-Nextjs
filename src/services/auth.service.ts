@@ -20,3 +20,10 @@ export const loginWithEmailPassword = async (
 
   return res;
 };
+
+export const logOut = async () => {
+  const supabase = createClientComponentClient();
+  const res = await supabase.auth.signOut();
+
+  return res;
+};

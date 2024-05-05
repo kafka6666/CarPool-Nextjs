@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import { UserSessionContextProvider } from "@/context/UserSessionContext";
 import "@mantine/carousel/styles.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
@@ -23,8 +24,10 @@ export default function RootLayout({
       </head>
       <body>
         <MantineProvider>
-          <Navbar />
-          {children}
+          <UserSessionContextProvider>
+            <Navbar />
+            {children}
+          </UserSessionContextProvider>
         </MantineProvider>
       </body>
     </html>
